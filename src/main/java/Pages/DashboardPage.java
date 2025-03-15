@@ -5,11 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class DashboardPage {
-
     protected WebDriver driver;
     WebDriverWait wait;
 
@@ -34,74 +32,86 @@ public class DashboardPage {
     }
 
     // Method to click on the Admin Module
-    public void clickAdminModule() {
+    public AdminPage clickAdminModule() {
         WebElement adminElement = wait.until(ExpectedConditions.elementToBeClickable(adminModule));
         adminElement.click();
+        return new AdminPage(driver);  // Returning the AdminPage object after clicking
     }
 
     // Method to click on the PIM Module
-    public void clickPimModule() {
+    public PimPage clickPimModule() {
         WebElement pimElement = wait.until(ExpectedConditions.elementToBeClickable(pimModule));
         pimElement.click();
+        return new PimPage(driver);  // Returning the PimPage object after clicking
     }
 
     // Method to click on the Leave Module
-    public void clickLeaveModule() {
+    public LeavePage clickLeaveModule() {
         WebElement leaveElement = wait.until(ExpectedConditions.elementToBeClickable(leaveModule));
         leaveElement.click();
+        return new LeavePage(driver);  // Returning the LeavePage object after clicking
     }
 
     // Method to click on the Time Module
-    public void clickTimeModule() {
+    public TimePage clickTimeModule() {
         WebElement timeElement = wait.until(ExpectedConditions.elementToBeClickable(timeModule));
         timeElement.click();
+        return new TimePage(driver);  // Returning the TimePage object after clicking
     }
 
     // Method to click on the Recruitment Module
-    public void clickRecruitmentModule() {
+    public RecruitmentPage clickRecruitmentModule() {
         WebElement recruitmentElement = wait.until(ExpectedConditions.elementToBeClickable(recruitmentModule));
         recruitmentElement.click();
+        return new RecruitmentPage(driver);  // Returning the RecruitmentPage object after clicking
     }
 
     // Method to click on the My Info Module
-    public void clickMyInfoModule() {
+    public MyInfoPage clickMyInfoModule() {
         WebElement myInfoElement = wait.until(ExpectedConditions.elementToBeClickable(myInfoModule));
         myInfoElement.click();
+        return new MyInfoPage(driver);  // Returning the MyInfoPage object after clicking
     }
 
     // Method to click on the Performance Module
-    public void clickPerformanceModule() {
+    public PerformancePage clickPerformanceModule() {
         WebElement performanceElement = wait.until(ExpectedConditions.elementToBeClickable(performanceModule));
         performanceElement.click();
+        return new PerformancePage(driver);  // Returning the PerformancePage object after clicking
     }
 
     // Method to click on the Dashboard Module
-    public void clickDashboardModule() {
+    public DashboardPage clickDashboardModule() {
         WebElement dashboardElement = wait.until(ExpectedConditions.elementToBeClickable(dashboardModule));
         dashboardElement.click();
+        return new DashboardPage(driver);  // Returning the DashboardPage object after clicking
     }
 
     // Method to click on the Directory Module
-    public void clickDirectoryModule() {
+    public DirectoryPage clickDirectoryModule() {
         WebElement directoryElement = wait.until(ExpectedConditions.elementToBeClickable(directoryModule));
         directoryElement.click();
+        return new DirectoryPage(driver);  // Returning the DirectoryPage object after clicking
     }
 
     // Method to click on the Maintenance Module
-    public void clickMaintenanceModule() {
+    public MaintenancePage clickMaintenanceModule() {
         WebElement maintenanceElement = wait.until(ExpectedConditions.elementToBeClickable(maintenanceModule));
         maintenanceElement.click();
+        return new MaintenancePage(driver);  // Returning the MaintenancePage object after clicking
     }
 
     // Method to click on the Claim Module
-    public void clickClaimModule() {
+    public ClaimPage clickClaimModule() {
         WebElement claimElement = wait.until(ExpectedConditions.elementToBeClickable(claimModule));
         claimElement.click();
+        return new ClaimPage(driver);  // Returning the ClaimPage object after clicking
     }
 
     // Method to click on the Buzz Module
-    public void clickBuzzModule() {
+    public BuzzPage clickBuzzModule() {
         WebElement buzzElement = wait.until(ExpectedConditions.elementToBeClickable(buzzModule));
         buzzElement.click();
+        return new BuzzPage(driver);  // Returning the BuzzPage object after clicking
     }
 }
