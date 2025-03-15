@@ -48,11 +48,13 @@ public class LoginPage {
     }
 
 
-    public void clickLoginBtn() throws InterruptedException {
+    public DashboardPage clickLoginBtn() throws InterruptedException {
 
 
         wait.until(ExpectedConditions.elementToBeClickable(loginbutton)).click();
         Thread.sleep(5000);
+
+        return  new DashboardPage(driver);
 
     }
 
